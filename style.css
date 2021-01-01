@@ -4,9 +4,6 @@
   text-transform: uppercase;
 
 }
-/* .playing-field {
-  height: 550px;
-} */
 body {
   background: radial-gradient( hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   text-transform: uppercase;
@@ -288,12 +285,6 @@ body {
   .picked__inner {
     width: 70vw;
   }
-  /* .paper-btn, .rock-btn {
-    margin-top: 30px;
-    }
-  .scissors-btn{
-    margin-bottom: 30px;
-  } */
   .game-btn {
     transform: scale(0.95);
   }
