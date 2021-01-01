@@ -4,9 +4,9 @@
   text-transform: uppercase;
 
 }
-.playing-field {
+/* .playing-field {
   height: 550px;
-}
+} */
 body {
   background: radial-gradient( hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   text-transform: uppercase;
@@ -88,7 +88,7 @@ body {
 }
 
 .game {
-  height: 60vh;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,13 +107,13 @@ body {
 }
 .game::after {
   background-image: url(images/bg-triangle.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   content: "";
   position: absolute;
-  width: 40%;
-  height: 40%;
+  width: 240px;
+  height: 240px;
   z-index: -3;
 }
 .game-style {
@@ -187,12 +187,13 @@ body {
     cursor: pointer;
 }
 .picked {
-  height: 60vh;
+  height: 300px;
   margin-top: 35px;
   display: none;
 }
 .picked__inner {
   display: flex;
+  flex-wrap: wrap;
   width: 60vw;
   margin: 0 auto;
   justify-content: space-between;
@@ -263,4 +264,124 @@ body {
 .modal-window > div .game__rules {
   flex-basis: 100%;
   margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .score {
+    width: 70vw;
+  }
+
+  .winner-style::after {
+    transform: scale(0.75);
+  }
+  .picked__inner {
+    width: 70vw;
+  }
+  /* .paper-btn, .rock-btn {
+    margin-top: 30px;
+    }
+  .scissors-btn{
+    margin-bottom: 30px;
+  } */
+  .game-btn {
+    transform: scale(0.95);
+  }
+
+}
+@media (max-width: 700px) {
+  .picked{
+    transform: scale(0.9);
+  }
+  .picked__inner {
+    width: 80vw;
+  }
+  .game-btn {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 650px) {
+  .result {
+    order: 1;
+    margin: 0 15px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .picked__inner {
+    margin-top: 5px;
+  }
+  .user-choice, .pc-choice {
+    margin: 0 45px;
+  }
+  .user-choice__title, .pc-choice__title {
+    margin-bottom: 30px;
+  }
+  .winner-style::after {
+      transform: scale(0.65);
+  }
+  .picked__inner {
+    width: 90vw;
+  }
+  .game-btn {
+    transform: scale(0.85);
+  }
+  .footer__inner {
+    text-align: center;
+  }
+  .rules {
+    margin-bottom: 50px;
+    margin-top: 35px;
+  }
+  .rules_button {
+    position: relative;
+    left: 0;
+    bottom: 0;
+
+  }
+}
+@media (max-width: 550px) {
+  .score {
+    width: 85vw;
+  }
+  .game {
+    transform: scale(0.85);
+  }
+  .picked{
+    transform: scale(0.85);
+  }
+  .user-choice, .pc-choice {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 410px) {
+  .score {
+    width: 90vw;
+    transform: scale(0.85);
+  }
+  .game {
+    transform: scale(0.75);
+  }
+
+  .picked{
+    transform: scale(0.75);
+  }
+  .user-choice, .pc-choice {
+    margin: 0 5px;
+  }
+  .picked__inner {
+    width: 100vw;
+  }
+  .winner-style::after {
+    transform: scale(0.5);
+  }
 }
