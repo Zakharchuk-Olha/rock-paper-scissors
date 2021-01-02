@@ -1,5 +1,5 @@
 const choices = ['paper', 'scissors', 'rock'];
-const buttons = document.querySelectorAll('.game-btn ');
+const buttons = document.querySelectorAll('.game-btn');
 const scoreCounter = document.getElementById('score-counter');
 const game = document.getElementById('game');
 const picked = document.getElementById('picked');
@@ -35,7 +35,7 @@ again.addEventListener('click',  () => {
   updateStyle(userSelect);
   removeWinnerStyle(pcSelect);
   removeWinnerStyle(userSelect);
-  buttons.disabled = false;
+  enableBtn() 
 })
 
 
@@ -44,7 +44,8 @@ function winner() {
 
   updateSelection(pcSelect, pcChoice);
   updateSelection(userSelect, userChoice);
-  buttons.disabled = true;
+
+  disableBtn()
   
   if(userChoice === pcChoice) {
     winnerIs.innerText = 'draw';
@@ -98,4 +99,14 @@ function winnerStyle(pickedEl) {
 function removeWinnerStyle(pickedEl) {
   const span = pickedEl.querySelector('span');
   span.classList.remove('winner-style');
+}
+
+
+
+function disableBtn() {
+    document.querySelectorAll('.game-btn').disabled = true;
+}
+
+function enableBtn() {
+    document.querySelectorAll('.game-btn').disabled = false;
 }
