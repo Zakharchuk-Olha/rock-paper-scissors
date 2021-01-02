@@ -35,6 +35,7 @@ again.addEventListener('click',  () => {
   updateStyle(userSelect);
   removeWinnerStyle(pcSelect);
   removeWinnerStyle(userSelect);
+  buttons.disabled = false;
 })
 
 
@@ -43,7 +44,8 @@ function winner() {
 
   updateSelection(pcSelect, pcChoice);
   updateSelection(userSelect, userChoice);
-
+  buttons.disabled = true;
+  
   if(userChoice === pcChoice) {
     winnerIs.innerText = 'draw';
   } else if (userChoice === 'paper' && pcChoice === 'rock' ||
