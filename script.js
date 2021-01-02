@@ -35,7 +35,7 @@ again.addEventListener('click',  () => {
   updateStyle(userSelect);
   removeWinnerStyle(pcSelect);
   removeWinnerStyle(userSelect);
-  enableBtn() 
+
 })
 
 
@@ -45,7 +45,7 @@ function winner() {
   updateSelection(pcSelect, pcChoice);
   updateSelection(userSelect, userChoice);
 
-  disableBtn()
+
   
   if(userChoice === pcChoice) {
     winnerIs.innerText = 'draw';
@@ -99,14 +99,4 @@ function winnerStyle(pickedEl) {
 function removeWinnerStyle(pickedEl) {
   const span = pickedEl.querySelector('span');
   span.classList.remove('winner-style');
-}
-
-
-
-function disableBtn() {
-    document.querySelectorAll('.game-btn').disabled = true;
-}
-
-function enableBtn() {
-    document.querySelectorAll('.game-btn').disabled = false;
 }
