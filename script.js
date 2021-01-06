@@ -44,7 +44,8 @@ function winner() {
 
   updateSelection(pcSelect, pcChoice);
   updateSelection(userSelect, userChoice);
-
+  pcSelect.disabled = true;
+  userSelect.disabled = true;
 
   
   if(userChoice === pcChoice) {
